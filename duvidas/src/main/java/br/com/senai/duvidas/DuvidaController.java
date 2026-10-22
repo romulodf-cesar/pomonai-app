@@ -26,6 +26,7 @@ public class DuvidaController {
     @PostMapping
     @Transactional
     public void cadastrar(@RequestBody DadosCadastroDuvida dados){
+      
         repository.save(new Duvida(dados));
     }
 }

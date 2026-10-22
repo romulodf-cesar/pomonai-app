@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<h1>FAQ Java FullStack</h1>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>FAQ Java FullStack</h1>
+    <div class="faq">   
+        <details th:each="d : ${duvidas}">   
+              <summary th:text="${d.texto}">Texto da dúvida</summary> 
+                  <p class="info"> 
+                      Enviada em :<span th:text="${#temporals.format(d.dataHora, 'dd/MM/yyyy HH:mm')}">17/10/2026 09:00</span>
+                  </p>
+                
+        </details>
+        <p th:if="${#lists.isEmpty(duvidas)}">Nenhuma dúvida cadastrada ainda.</p>
+</body>
+</html>

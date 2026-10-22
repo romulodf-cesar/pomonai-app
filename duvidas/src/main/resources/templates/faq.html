@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Java FullStack</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0a0d4c;
+            color: #fff;
+            padding: 24px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .faq {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        details {
+            background: #141a6b;
+            border: 2px solid #4da3ff;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            padding: 14px 18px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .info {
+            margin: 10px 0 0;
+            color: #9fc4ff;
+            font-size: 14px;
+        }
+
+        .resp {
+            margin: 8px 0 0;
+            color: #cfe6ff;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>FAQ Java FullStack</h1>
+    <div class="faq">
+        <details th:each="d : ${duvidas}">
+            <summary th:text="${d.texto}">Texto da dúvida</summary>
+            <p class="info">
+                Enviada em
+                <span th:text="${#temporals.format(d.dataHora, 'dd/MM/yyyy HH:mm')}">17/10/2026 09:00</span>
+               
+            <p class="resp">Resposta em breve: o professor responde na aula.</p>
+        </details>
+        <p th:if="${#lists.isEmpty(duvidas)}">Nenhuma dúvida cadastrada ainda.</p>
+    </div>
+</body>
+
+</html>

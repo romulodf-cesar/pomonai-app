@@ -7,6 +7,8 @@
 ![React Native](https://img.shields.io/badge/React%20Native-App-61dafb)
 ![Banco](https://img.shields.io/badge/Banco-Relacional-blue)
 
+Para acessar a documentação acesse:
+http://localhost:8080/swagger-ui/index.html
 ---
 
 ## 📌 Sobre o projeto

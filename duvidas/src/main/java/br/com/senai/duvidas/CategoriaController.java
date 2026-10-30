@@ -11,20 +11,22 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.ui.Model; //dados
+
 import br.com.senai.duvidas.Categoria;
 @Controller 
 public class CategoriaController {
     @Autowired
     private CategoriaRepository repository; 
   
-    @PostMapping("/categoria/cadastrar")
+    @PostMapping("/cadcategoria")
     @Transactional
     public void cadastrar(@RequestBody DadosCadastroCategoria dados){      
         repository.save(new Categoria(dados));
     } 
 
     @GetMapping("/categoria")
-    public String faq(Model model){
-        return "faq";
+    public String categoria(){
+        return "categoria";
     }
 }

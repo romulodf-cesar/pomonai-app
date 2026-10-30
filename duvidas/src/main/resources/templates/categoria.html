@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -62,20 +61,13 @@
         }
     </style>
 </head>
-
 <body>
     <h1>FAQ Java FullStack</h1>
     <div class="faq">
-        
-
-            <form th:action="@{/categoria/cadastrar}" method="post"> 
-                <input type="hidden" name="id" th:value="${d.id}"> 
-                <button type="submit" class="btn btn-danger btn-sm">Cadastrar</button> 
-            </form> 
-
-
-
+        <form th:action="@{/cadcategoria}" method="post">
+            categoria <input type="text" name="nome" value="">
+            <button type="submit" class="btn btn-danger btn-sm">Cadastrar</button>
+        </form>
     </div>
 </body>
-
 </html>

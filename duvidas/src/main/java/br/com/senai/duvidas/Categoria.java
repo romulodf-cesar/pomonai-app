@@ -6,6 +6,10 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+
 import jakarta.persistence.Column;
 
 import lombok.Getter;
@@ -27,8 +31,11 @@ public class Categoria {
 
     @Column(nullable = false, unique = true)
     private String nome;
-
-    public Categoria(String nome) {
-       this.nome = nome;
+    
+    public Categoria(DadosCadastroCategoria dados){
+        this.nome = dados.nome();
     }
+
+    
+   
 }

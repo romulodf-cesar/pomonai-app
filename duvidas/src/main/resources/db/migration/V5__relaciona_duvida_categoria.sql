@@ -1,3 +1,6 @@
+
+
+
 ALTER TABLE duvida
 ADD COLUMN categoria_id BIGINT;
 
